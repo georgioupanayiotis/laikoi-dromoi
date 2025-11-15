@@ -10,19 +10,19 @@ A comprehensive TypeScript library for Greek Bouzouki music scales (dromoi) with
 - Helper functions to get scales by type and root note
 - TypeScript support with full type definitions
 - Zero dependencies (core library)
-- Tiny bundle size (5.6 KB)
+- Tiny bundle size
 - ESM module support
 
 ## Installation
 
 ```bash
-npm install @panayiotis/laikoi-dromoi
+npm install laikoi-dromoi
 ```
 
 or
 
 ```bash
-yarn add @panayiotis/laikoi-dromoi
+yarn add laikoi-dromoi
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ yarn add @panayiotis/laikoi-dromoi
 ### Basic Usage
 
 ```typescript
-import { scales, transposeScale, transposeChords } from '@panayiotis/laikoi-dromoi';
+import { scales, transposeScale, transposeChords } from 'laikoi-dromoi';
 
 // Get all scales
 console.log(scales);
@@ -50,7 +50,7 @@ console.log(armoniko);
 ### Transposing Scales
 
 ```typescript
-import { scales, transposeScale } from '@panayiotis/laikoi-dromoi';
+import { scales, transposeScale } from 'laikoi-dromoi';
 
 const armoniko = scales.find(s => s.name === 'Armoniko');
 
@@ -68,7 +68,7 @@ console.log(armonikoInA);
 ### Transposing Chords
 
 ```typescript
-import { scales, transposeChords } from '@panayiotis/laikoi-dromoi';
+import { scales, transposeChords } from 'laikoi-dromoi';
 
 const armoniko = scales.find(s => s.name === 'Armoniko');
 
@@ -86,7 +86,7 @@ import {
   getAllMajorScalesWithRoot,
   getAllMinorScalesWithRoot,
   getAllScalesWithRoot 
-} from '@panayiotis/laikoi-dromoi';
+} from 'laikoi-dromoi';
 
 // Get a specific scale transposed to a root note
 const matzoreInE = getScaleWithRoot('Matzore', 'E');
@@ -115,7 +115,7 @@ console.log(allScalesInG.length); // 19 scales total
 ### TypeScript Support
 
 ```typescript
-import { Scale, scales } from '@panayiotis/laikoi-dromoi';
+import { Scale, scales } from 'laikoi-dromoi';
 
 const minorScales: Scale[] = scales.filter(s => s.type === 'minor');
 const majorScales: Scale[] = scales.filter(s => s.type === 'major');
