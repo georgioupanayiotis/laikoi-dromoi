@@ -1,0 +1,48 @@
+{
+  "name": "@panayiotisgeorgiou/laikoi-dromoi",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Greek Bouzouki music scale generator – Laikoi Dromoi. Comprehensive collection of Greek music scales (dromoi) with transposition utilities.",
+  "keywords": [
+    "greek-music",
+    "bouzouki",
+    "scales",
+    "music-theory",
+    "dromoi",
+    "laiko",
+    "rembetiko",
+    "transpose"
+  ],
+  "author": "Panayiotis Georgiou",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panayiotisgeorgiou/laikoi-dromoi.git"
+  },
+  "homepage": "https://github.com/panayiotisgeorgiou/laikoi-dromoi#readme",
+  "bugs": {
+    "url": "https://github.com/panayiotisgeorgiou/laikoi-dromoi/issues"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "test": "npm run build && node test-library.js",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
