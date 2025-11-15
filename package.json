@@ -17,11 +17,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/panayiotisgeorgiou/laikoi-dromoi.git"
+    "url": "https://github.com/georgioupanayiotis/laikoi-dromoi.git"
   },
-  "homepage": "https://github.com/panayiotisgeorgiou/laikoi-dromoi#readme",
+  "homepage": "https://github.com/georgioupanayiotis/laikoi-dromoi#readme",
   "bugs": {
-    "url": "https://github.com/panayiotisgeorgiou/laikoi-dromoi/issues"
+    "url": "https://github.com/georgioupanayiotis/laikoi-dromoi/issues"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
