@@ -4,14 +4,14 @@ A comprehensive TypeScript library for Greek Bouzouki music scales (dromoi) with
 
 ## Features
 
-- 📚 Complete collection of 19 Greek music scales (both minor and major)
-- 🎵 Transpose scales to any root note
-- 🎸 Transpose chords along with scales
-- 🎯 Helper functions to get scales by type and root note
-- 🔧 TypeScript support with full type definitions
-- 📦 Zero dependencies (core library)
-- � Tiny bundle size (5.6 KB)
-- 📦 ESM module support
+- Complete collection of 19 Greek music scales (both minor and major)
+- Transpose scales to any root note
+- Transpose chords along with scales
+- Helper functions to get scales by type and root note
+- TypeScript support with full type definitions
+- Zero dependencies (core library)
+- Tiny bundle size (5.6 KB)
+- ESM module support
 
 ## Installation
 
