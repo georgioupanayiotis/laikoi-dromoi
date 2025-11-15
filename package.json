@@ -1,5 +1,5 @@
 {
-  "name": "@panayiotisgeorgiou/laikoi-dromoi",
+  "name": "laikoi-dromoi",
   "version": "0.1.0",
   "type": "module",
   "description": "Greek Bouzouki music scale generator – Laikoi Dromoi. Comprehensive collection of Greek music scales (dromoi) with transposition utilities.",
