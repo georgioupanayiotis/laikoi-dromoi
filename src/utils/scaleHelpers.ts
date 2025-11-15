@@ -6,14 +6,14 @@
  */
 
 import { scales } from '../data/scales.js';
-import { transposeScale } from './transpose.js';
+import { transposeScale, transposeChords } from './transpose.js';
 import type { Scale } from '../data/scales.js';
 
 /**
  * Get a specific scale transposed to a root note
  * @param scaleName - Name of the scale (e.g., 'Armoniko', 'Matzore')
  * @param rootNote - Root note to transpose to (e.g., 'D', 'E', 'C#')
- * @returns The scale with transposed notes, or null if scale not found
+ * @returns The scale with transposed notes and chords, or null if scale not found
  */
 export function getScaleWithRoot(scaleName: string, rootNote: string): (Scale & { transposedNotes: string[] }) | null {
   const scale = scales.find(s => s.name === scaleName);
@@ -21,46 +21,54 @@ export function getScaleWithRoot(scaleName: string, rootNote: string): (Scale & 
   
   return {
     ...scale,
-    transposedNotes: transposeScale(scale.notes, rootNote)
+    transposedNotes: transposeScale(scale.notes, rootNote),
+    basicChords: scale.basicChords ? transposeChords(scale.basicChords, rootNote) : undefined,
+    otherChords: scale.otherChords ? transposeChords(scale.otherChords, rootNote) : undefined
   };
 }
 
 /**
  * Get all major scales transposed to a specific root note
  * @param rootNote - Root note to transpose to (e.g., 'D', 'E', 'C#')
- * @returns Array of major scales with transposed notes
+ * @returns Array of major scales with transposed notes and chords
  */
 export function getAllMajorScalesWithRoot(rootNote: string): (Scale & { transposedNotes: string[] })[] {
   return scales
     .filter(s => s.type === 'major')
     .map(scale => ({
       ...scale,
-      transposedNotes: transposeScale(scale.notes, rootNote)
+      transposedNotes: transposeScale(scale.notes, rootNote),
+      basicChords: scale.basicChords ? transposeChords(scale.basicChords, rootNote) : undefined,
+      otherChords: scale.otherChords ? transposeChords(scale.otherChords, rootNote) : undefined
     }));
 }
 
 /**
  * Get all minor scales transposed to a specific root note
  * @param rootNote - Root note to transpose to (e.g., 'D', 'E', 'C#')
- * @returns Array of minor scales with transposed notes
+ * @returns Array of minor scales with transposed notes and chords
  */
 export function getAllMinorScalesWithRoot(rootNote: string): (Scale & { transposedNotes: string[] })[] {
   return scales
     .filter(s => s.type === 'minor')
     .map(scale => ({
       ...scale,
-      transposedNotes: transposeScale(scale.notes, rootNote)
+      transposedNotes: transposeScale(scale.notes, rootNote),
+      basicChords: scale.basicChords ? transposeChords(scale.basicChords, rootNote) : undefined,
+      otherChords: scale.otherChords ? transposeChords(scale.otherChords, rootNote) : undefined
     }));
 }
 
 /**
  * Get all scales (both major and minor) transposed to a specific root note
  * @param rootNote - Root note to transpose to (e.g., 'D', 'E', 'C#')
- * @returns Array of all scales with transposed notes
+ * @returns Array of all scales with transposed notes and chords
  */
 export function getAllScalesWithRoot(rootNote: string): (Scale & { transposedNotes: string[] })[] {
   return scales.map(scale => ({
     ...scale,
-    transposedNotes: transposeScale(scale.notes, rootNote)
+    transposedNotes: transposeScale(scale.notes, rootNote),
+    basicChords: scale.basicChords ? transposeChords(scale.basicChords, rootNote) : undefined,
+    otherChords: scale.otherChords ? transposeChords(scale.otherChords, rootNote) : undefined
   }));
 }
